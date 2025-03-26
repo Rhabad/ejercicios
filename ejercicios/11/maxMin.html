@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function max(arr) {
+        let numMax = 0;
+        let aux = 0;
+
+        for (i = 0; i <= arr.length; i++) {
+          aux = arr[i];
+          if (aux >= numMax) {
+            numMax = aux;
+          }
+        }
+        return numMax;
+      }
+
+      function min(arr) {
+        let numMin;
+        let aux = 0;
+
+        for (i = 0; i <= arr.length; i++) {
+          aux = arr[i];
+          if (numMin == null) {
+            numMin = aux;
+          } else if (aux <= numMin) {
+            numMin = aux;
+          }
+        }
+        return numMin;
+      }
+
+      console.log(max([1, 5, 100, 4]));
+      console.log(min([16, 5, 1, 40]));
+    </script>
+  </body>
+</html>
+l

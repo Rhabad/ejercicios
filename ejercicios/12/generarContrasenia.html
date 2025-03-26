@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function generarPassword(pass) {
+        let nuevoPass = "";
+
+        let cadena = pass.split(" ");
+        let nuevaCadena = cadena.join("");
+
+        for (i = 0; i <= nuevaCadena.length - 1; i++) {
+          let caracter = nuevaCadena[i];
+
+          if (
+            nuevaCadena[i] === nuevaCadena[i].toUpperCase() &&
+            nuevaCadena[i] !== nuevaCadena[i].toLowerCase()
+          ) {
+            caracter = nuevaCadena[i].toLowerCase();
+          }
+
+          if (nuevaCadena[i] === "a") {
+            caracter = 4;
+          }
+          if (nuevaCadena[i] === "e") {
+            caracter = 3;
+          }
+          if (nuevaCadena[i] === "i") {
+            caracter = 1;
+          }
+          if (nuevaCadena[i] === "o") {
+            caracter = 0;
+          }
+          nuevoPass += caracter;
+        }
+
+        return nuevoPass;
+      }
+
+      console.log(generarPassword("hola MuNdo"));
+    </script>
+  </body>
+</html>

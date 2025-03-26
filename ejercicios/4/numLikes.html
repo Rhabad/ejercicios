@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function likes(numLikes) {
+        if (numLikes < 1000) {
+          console.log(numLikes);
+        } else if (numLikes >= 1000 && numLikes < 1000000) {
+          let likes = Math.trunc((numLikes / 1000) * 10) / 10;
+          console.log(likes + "K");
+        } else if (numLikes >= 1000000) {
+          let likes = Math.trunc((numLikes / 1000000) * 10) / 10;
+          console.log(likes + "M");
+        }
+      }
+
+      likes(99999999);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,65 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+.flex-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  min-width: 500px;
+  max-width: 700px;
+}
+
+nav {
+  display: flex;
+}
+
+nav ul {
+  font-size: 18px;
+  display: flex;
+  width: 100%;
+  gap: 20px;
+  margin: 10;
+  padding: 0;
+  list-style: none;
+  justify-content: space-evenly;
+}
+nav li {
+  border-bottom: 1px solid transparent;
+}
+nav li:hover {
+  opacity: 0.5;
+  cursor: pointer;
+  border-bottom: 1px solid #000;
+}
+
+.tab {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid #000;
+  border-radius: 16px;
+  padding: 10px;
+}
+.tab div {
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70px;
+}
+
+/*Se empeiza contando del 2, por que el 1 es el nav
+SERA UTIL PARA EL ARCHIVO JS*/
+/* .container .tab:nth-child(2) {
+  display: none;
+} */

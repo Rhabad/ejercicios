@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function numDeAes(palabra) {
+        let minusPalabra = palabra.toLowerCase();
+        let cont = 0;
+        for (caracter of minusPalabra) {
+          if (caracter == "a") {
+            cont++;
+          }
+        }
+        return cont;
+      }
+
+      console.log(numDeAes("hola, me llamo nicolas. son programador web"));
+    </script>
+  </body>
+</html>
+l

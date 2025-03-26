@@ -1,0 +1,62 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+.container-wrappler {
+  display: grid;
+  grid-template-columns: repeat(
+    3,
+    1fr
+  ); /* Se reparten igual sin necesidad de % */
+  grid-template-rows: repeat(3, 1fr);
+  gap: 10px;
+  width: calc(100vw - 10px); /* Resta el gap total (2 gaps de 10px) */
+  height: calc(100vh - 10px); /* Resta el gap total */
+  margin: auto; /* Asegura que ocupe toda la pantalla */
+}
+
+.container-wrappler > :nth-child(1) {
+  background-image: url(montania.avif);
+  background-size: cover;
+  background-position: center;
+  grid-area: 1/1 / 3/2;
+}
+.container-wrappler > :nth-child(2) {
+  background-image: url(sopa.avif);
+  background-size: cover;
+  background-position: center;
+  grid-area: 1/2 / 2/3;
+}
+.container-wrappler > :nth-child(3) {
+  background-image: url(resinto.avif);
+  background-size: cover;
+  background-position: center;
+  grid-area: 1/3 / 3/4;
+}
+.container-wrappler > :nth-child(4) {
+  background-image: url(hab-blanca.avif);
+  background-size: cover;
+  background-position: center;
+  grid-area: 3/1 / 4/2;
+}
+.container-wrappler > :nth-child(5) {
+  background-image: url(puerta.avif);
+  background-size: cover;
+  background-position: center;
+  grid-area: 2/2 / 4/3;
+}
+.container-wrappler > :nth-child(6) {
+  background-image: url(playa-fea.avif);
+  background-size: cover;
+  background-position: center;
+  grid-area: 3/3 / 4/4;
+}

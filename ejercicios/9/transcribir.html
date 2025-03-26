@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function transcribir(adn) {
+        let nuevoAdn = adn.toLowerCase();
+        let arn = "";
+        for (caracter of nuevoAdn) {
+          switch (caracter) {
+            case "g":
+              arn = arn + "C";
+              break;
+            case "c":
+              arn = arn + "G";
+              break;
+            case "t":
+              arn = arn + "A";
+              break;
+            case "a":
+              arn = arn + "U";
+              break;
+          }
+        }
+        return arn;
+      }
+
+      console.log(transcribir("ACGT"));
+    </script>
+  </body>
+</html>

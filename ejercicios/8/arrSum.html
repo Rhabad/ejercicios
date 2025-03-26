@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function sumArr(arr) {
+        let sum = 0;
+        for (i = 0; i <= arr.length - 1; i++) {
+          sum = sum + arr[i];
+        }
+        return sum;
+      }
+
+      function mulArr(arr) {
+        let result;
+        for (i = 0; i <= arr.length - 1; i++) {
+          if (result == null) {
+            result = arr[i];
+            continue;
+          }
+          result = result * arr[i];
+        }
+        return result;
+      }
+
+      function removerCeros(arr) {
+        let arrSinCeros = [];
+        for (numero of arr) {
+          if (numero != 0) {
+            arrSinCeros.push(numero);
+          }
+        }
+        return arrSinCeros;
+      }
+
+      function sumArrRango(arr, posInicial, posFinal) {
+        let sum = 0;
+        for (i = posInicial; i <= posFinal; i++) {
+          sum = sum + arr[i];
+        }
+        return sum;
+      }
+
+      console.log(sumArr([10, 2, 4]));
+      console.log(mulArr([10, 2, 1]));
+      console.log(removerCeros([10, 2, 0, 1, 0, 3]));
+      console.log(sumArrRango([10, 2, 4], 1, 2));
+    </script>
+  </body>
+</html>

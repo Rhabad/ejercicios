@@ -1,0 +1,33 @@
+body {
+  background-color: brown;
+}
+.card {
+  background-color: rgb(21, 54, 54);
+  width: 400px;
+  margin: auto;
+  margin-top: 60px;
+  border-radius: 20px;
+
+  box-shadow: 20px 20px 50px 10px #222020;
+}
+
+.card-titulo {
+  text-align: center;
+  color: rgb(228, 156, 67);
+  padding-top: 20px;
+}
+.card-subtitulo {
+  text-align: center;
+  color: rgb(228, 156, 67);
+}
+
+.card-contenido {
+  background-color: rgb(70, 64, 54);
+  text-align: justify;
+  color: rgb(228, 156, 67);
+  padding: 10px 30px;
+  font-family: sans-serif;
+  text-align: justify;
+  border-radius: 0 0 20px 20px;
+  border-top: 2px solid rgb(20, 20, 167);
+}

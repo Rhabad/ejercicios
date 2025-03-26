@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Practicando DOM</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section class="botones">
+      <div onclick="toggle()" class="boton">Abrir - cerrar</div>
+      <div onclick="cambiar()" class="boton">Cambiar título</div>
+      <div onclick="crearDiv()" class="boton">Crear bloque</div>
+      <div onclick="borrarDiv()" class="boton">Borrar bloque</div>
+      <div onclick="fuentesImg()" class="boton">Fuentes</div>
+      <div onclick="intercalar()" class="boton">Subtitulo</div>
+    </section>
+    <header><h1 id="titular" onclick="togleClase()">Hola Mundo</h1></header>
+    <div id="subtitulo" style="text-align: center">
+      Página de muestra de javascript dhtml
+    </div>
+    <div class="paneles">
+      <figure onclick="ponerPie(this)">
+        <img src="uno.png" width="33" height="75" alt="Número 1" />
+        <figcaption></figcaption>
+      </figure>
+      <figure onclick="ponerPie(this)">
+        <img src="dos.png" width="50" height="75" alt="Número 2" />
+        <figcaption></figcaption>
+      </figure>
+      <figure onclick="ponerPie(this)">
+        <img src="tres.png" width="49" height="75" alt="Número 3" />
+        <figcaption></figcaption>
+      </figure>
+    </div>
+    <div id="fuentes"></div>
+    <div class="carrusel" data-img="0" onclick="cambiaImg()">
+      <img src="uno.png" alt="Diapositivas" id="diapo" />
+    </div>
+    <!-- inicio de las funciones javascript pedidas en los ejercicios -->
+    <script>
+      function cambiar() {
+        let titular = document.getElementById("titular");
+
+        if (titular.innerText === "Hola Mundo") {
+          titular.innerText = "Hola mundo con js";
+          titular.style.color = "red";
+          titular.style.textAlign = "center";
+        } else if (titular.innerText === "Hola mundo con js") {
+          titular.innerText = "Hola Mundo";
+          titular.style.color = "black";
+          titular.style.textAlign = "left";
+        }
+      }
+      function crearDiv() {
+        let text = document.createTextNode(
+          "Js permite crear paginas dinamicas"
+        );
+        let bloque = document.createElement("div");
+
+        bloque.setAttribute(
+          "style",
+          "background: red; color: white; text-align: center"
+        );
+        bloque.appendChild(text);
+        document.body.appendChild(bloque);
+      }
+      function borrarDiv() {
+        let bloque = document.getElementById("subtitulo");
+        if (bloque != null) {
+          document.body.removeChild(bloque);
+        }
+      }
+      function ponerPie(fig) {}
+      function fuentesImg() {}
+      function togleClase() {}
+      function intercalar() {}
+
+      function cambiaImg() {}
+      function toggle() {}
+    </script>
+  </body>
+</html>
