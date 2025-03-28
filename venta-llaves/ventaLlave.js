@@ -24,6 +24,10 @@ function insertarLlaves(llave) {
     //insectamos los datos de la llave al div
     div.innerHTML = llave;
 
+    div.onclick = () => {
+      alert("comprado");
+    };
+
     fragment.appendChild(div);
   }
 
