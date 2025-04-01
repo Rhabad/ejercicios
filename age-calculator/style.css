@@ -1,0 +1,32 @@
+body {
+  margin: 0;
+}
+h2,
+p {
+  margin: 0;
+}
+
+.flex-wrapper {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.calculadora {
+  display: flex;
+  flex-direction: column;
+}
+
+button {
+  background-color: #0009;
+  color: #fff;
+}
