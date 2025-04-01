@@ -45,9 +45,6 @@ p {
   color: #fff;
   font-size: 18px;
 }
-.item__btn:active {
-  opacity: 0.8;
-}
 
 .item__contenido {
   display: none;
