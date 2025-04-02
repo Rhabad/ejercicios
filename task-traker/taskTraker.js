@@ -1,5 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   crearTarea();
+  eliminarTarea();
+  tareaCompletada();
 });
 
 const task = document.querySelector('.create-task input[type="text"]');
@@ -25,10 +27,51 @@ function nuevaTarea() {
 
   /* crear el div con la tarea */
   let formatoTarea = `<div class="tasks">
-                        <input type="checkbox" />
+                        <input class="check" type="checkbox" />
                         <p>${tareaNueva}</p>
-                        <button>Borrar</button>
+                        <button class="borrar">Borrar</button>
                     </div>`;
 
   containTask.innerHTML += formatoTarea;
+}
+
+const tareas = document.querySelectorAll(".tasks");
+/* const tareaBotones = document.querySelectorAll(".tasks button"); */
+function eliminarTarea() {
+  // EVENT DELEGATION: Escuchamos los clics en el contenedor principal
+  containTask.addEventListener("click", (event) => {
+    if (event.target.classList.contains("borrar")) {
+      event.target.closest(".tasks").remove(); // Elimina la tarea completa
+    }
+  });
+
+  /* tareaBotones.forEach((btn, indice) => {
+    btn.addEventListener("click", () => {
+      tareas[indice].remove();
+    });
+  }); */
+}
+
+const tareasCheckbox = document.querySelectorAll(
+  '.tasks input[type="checkbox"]'
+);
+const tareasTextos = document.querySelectorAll(".tasks p");
+function tareaCompletada() {
+  containTask.addEventListener("change", (event) => {
+    if (event.target.classList.contains("check")) {
+      const checkTarea = event.target.closest(".tasks");
+
+      if (event.target.checked) {
+        checkTarea.classList.add("tasks--completado");
+      } else {
+        checkTarea.classList.remove("tasks--completado");
+      }
+    }
+  });
+
+  /* tareasCheckbox.forEach((tareaCheck, indice) => {
+    if (tareaCheck.cheecked) {
+      tareas[indice].classList.add("tasks--completado");
+    }
+  }); */
 }
