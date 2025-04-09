@@ -1,0 +1,75 @@
+body {
+  margin: 0;
+}
+
+h2 {
+  margin: 0;
+  font-size: 30px;
+}
+
+/* header */
+.menu {
+  display: flex;
+  height: 70px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-bar {
+  display: flex;
+  align-items: center;
+  position: relative;
+  height: 100%;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  height: 100%;
+}
+.logo > div {
+  padding-left: 30px;
+}
+
+.logo > div > img {
+  width: 30px;
+  height: 30px;
+}
+nav {
+  display: none;
+  position: absolute;
+  top: 60px;
+  left: 0px;
+  background-color: #fcf7f7;
+  border-radius: 10px;
+}
+
+nav ul {
+  padding: 0;
+  margin: 0;
+  width: 220px;
+  text-align: center;
+}
+.item {
+  list-style: none;
+  padding: 10px;
+  margin: 5px 0px;
+}
+.item:active {
+  background-color: #0002;
+}
+
+.perfil {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  height: 100%;
+}
+
+.perfil div:nth-child(2) > img {
+  width: 24px;
+  height: 24px;
+  padding-right: 30px;
+}
+
+/* header */
