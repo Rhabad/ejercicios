@@ -26,15 +26,20 @@ h2 {
   align-items: center;
   gap: 20px;
   height: 100%;
+  padding-left: 30px;
 }
 .logo > div {
-  padding-left: 30px;
+  display: block;
 }
 
 .logo > div > img {
   width: 30px;
   height: 30px;
 }
+.logo div:active {
+  background-color: #0002;
+}
+
 nav {
   display: none;
   position: absolute;
@@ -71,5 +76,4 @@ nav ul {
   height: 24px;
   padding-right: 30px;
 }
-
 /* header */
