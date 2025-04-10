@@ -37,15 +37,21 @@
     <!-- main -->
     <main>
       <div class="img-producto">
-        <button class="btn-izquierda">
-          <img src="arrozLeft.png" alt="" />
-        </button>
+        <button class="btn btn-izquierda"><</button>
         <div class="galeria">
           <img class="galeria-foto" src="zapatos/zapatos.webp" alt="zapato1" />
-          <img class="galeria-foto" src="zapatos/zapato2.jpg" alt="zapato2" />
-          <img class="galeria-foto" src="zapatos/zapato3.jpeg" alt="zapato3" />
+          <img
+            class="galeria-foto hidden-foto"
+            src="zapatos/zapato2.jpg"
+            alt="zapato2"
+          />
+          <img
+            class="galeria-foto hidden-foto"
+            src="zapatos/zapato3.jpeg"
+            alt="zapato3"
+          />
         </div>
-        <button class="btn-derecha"><img src="arrowRigth.png" alt="" /></button>
+        <button class="btn btn-derecha">></button>
       </div>
       <div class="descripcion-producto">
         <h4>SNEAKER COMPANY</h4>
@@ -59,12 +65,12 @@
       <div class="precio-venta">
         <div class="precio-producto">
           <p>$125.00 <b>50%</b></p>
-          <p>$250.00</p>
+          <p id="precio-anterior">$250.00</p>
         </div>
         <div class="stock-producto">
-          <p>-</p>
+          <button class="btn-stock btn-remove">-</button>
           <p>0</p>
-          <p>+</p>
+          <button class="btn-stock btn-add">+</button>
         </div>
         <button class="comprar-producto">
           <img src="carrito.png" alt="carrito" />

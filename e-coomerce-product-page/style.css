@@ -6,6 +6,10 @@ h2 {
   margin: 0;
   font-size: 30px;
 }
+p,
+h4 {
+  margin: 0;
+}
 
 /* header */
 .menu {
@@ -47,6 +51,7 @@ nav {
   left: 0px;
   background-color: #fcf7f7;
   border-radius: 10px;
+  z-index: 4;
 }
 
 nav ul {
@@ -78,9 +83,127 @@ nav ul {
 }
 /* header */
 /* main */
+
+.img-producto {
+  position: relative;
+}
+.btn {
+  background-color: #fff;
+  position: absolute;
+  border-radius: 50%;
+  font-size: 30px;
+  border: none;
+  width: 50px;
+  height: 50px;
+}
+.btn:active {
+  opacity: 0.7;
+}
+.btn-izquierda {
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+}
+.btn-derecha {
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+}
+
+.galeria {
+  height: 400px;
+  width: 400px;
+  background-size: contain;
+}
+.galeria-foto {
+  height: 100%;
+  width: 100%;
+}
+/* descripcion producto */
+.descripcion-producto {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 20px;
+  padding: 0 20px;
+}
+.descripcion-producto h4 {
+  color: #000c;
+}
+.descripcion-producto p {
+  color: #0007;
+}
+/* descripcion producto */
+
+/* precio venta del producto */
+.precio-venta {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 0 20px;
+  padding-bottom: 50px;
+  margin-top: 20px;
+}
+.precio-producto {
+  display: flex;
+  justify-content: space-between;
+  font-size: 30px;
+}
+.precio-producto b {
+  margin-left: 20px;
+  background-color: #000;
+  color: #fff;
+  padding: 5px;
+  border-radius: 12px;
+}
+#precio-anterior {
+  font-size: 18px;
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+.stock-producto {
+  display: flex;
+  justify-content: space-around;
+  font-size: 30px;
+  background-color: #fcf7f7;
+  padding: 10px;
+  border-radius: 20px;
+}
+.btn-stock {
+  padding: 0 15px;
+  font-size: 30px;
+  border: none;
+  background-color: transparent;
+}
+.btn-stock:active {
+  background-color: #0005;
+}
+
+.comprar-producto {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffa88e;
+  border: none;
+  box-shadow: 0 4px 10px #ffa88e;
+  gap: 30px;
+  height: 50px;
+  width: 300px;
+  margin: auto;
+  font-size: 20px;
+}
+.comprar-producto:active {
+  opacity: 0.7;
+}
+/* precio venta del producto */
 /* main */
 
 /* clases que usare en js */
 .mostrar-nav {
   display: block;
+}
+
+.hidden-foto {
+  display: none;
 }
