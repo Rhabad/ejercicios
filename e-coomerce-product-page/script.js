@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   menuDesplegable();
   cambiarImagen();
+  stock();
 });
 
 /* menu desplegable en dispositivos pequeños */
@@ -43,6 +44,25 @@ function cambiarImagen() {
 /* moverse entre las imagenes diferentes */
 
 /* agregar o remover stock */
+function stock() {
+  let totalStock = document.querySelector(".stock-producto p");
+  const btnRemove = document.querySelector(".btn-remove");
+  const btnAdd = document.querySelector(".btn-add");
+
+  btnAdd.addEventListener("click", () => {
+    let valorActual = parseInt(totalStock.innerText);
+    totalStock.innerText = valorActual + 1;
+  });
+
+  btnRemove.addEventListener("click", () => {
+    let valorActual = parseInt(totalStock.innerText);
+    if (valorActual == 0) {
+      totalStock.innerText = 0;
+    } else {
+      totalStock.innerText = valorActual - 1;
+    }
+  });
+}
 /* agregar o remover stock */
 
 /* agregar compra al carrita, solo un mensaje, 
